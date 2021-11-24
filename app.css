@@ -64,3 +64,15 @@ nav{
     margin: 68px;
     text-align: end;
 }
+<<<<<<< Updated upstream
+=======
+.tabela_1 {
+    padding: 85px;
+    margin: 43px;
+    margin-left: -115px;
+    border: 1px solid black;
+}
+th.tabela_1 {
+    box-sizing: border-box;
+}
+>>>>>>> Stashed changes
