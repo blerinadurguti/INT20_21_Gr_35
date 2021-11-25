@@ -122,6 +122,36 @@
         .log{
             text-decoration: none;
         }
+        .close-button{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #444;
+            right: -15px;
+            top: -15px;
+            background: #fff;
+            position: absolute;
+        }
+        .close-button>div{
+            width: 24px;
+            height: 4px;
+            background: #000;
+            position: absolute;
+            left: 3px;
+            top: 13px;
+            cursor: pointer;
+        }
+        .close-button>div:first-child{
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .close-button>div:last-child{
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     </style>
 </head>
 <body>
@@ -148,8 +178,10 @@
     <div class="or">
         OR
     </div>
-
-
+    <div class="close-button">
+        <div></div>
+        <div></div>
+    </div>
 
 </div>
 </body>
