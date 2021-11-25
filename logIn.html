@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href='app.css'>
+    <title>Document</title>
     <style>
         body{
             background-color: lightgray;
@@ -26,6 +25,7 @@
             padding: 40px;
             width: 300px;
             height: 400px;
+            text-align: center;
         }
         h1{
             margin-bottom: 20px;
@@ -62,10 +62,6 @@
         .submit-btn:focus{
             background: #ff5722;
             transition: 0.2s;
-
-        }
-        .submit-btn{
-            color: black;
         }
         .right-box{
             position: absolute;
@@ -118,53 +114,43 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
         }
-        .SignUp{
+        .logIn{
             border: none;
             background-color: lightgray;
             cursor: pointer;
         }
-        .sig{
+        .log{
             text-decoration: none;
-    
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="heading">
-            <h4>Real Estate Agency</h4>
-        </div>
-        <ul class="nav-links">
-            <li><a  href="index1.html">Home</a></li>
-            <li><a  href="buy.html">Buy</a></li>
-            <li><a  href="sell.html">Sell</a></li>
-            <li><a href="about_us.html">About Us</a></li>
-            <li><a class='active' href="#">Log In</a></li>
-        </ul>
-    </nav>
-    <div class="SignUp-box">
-        <div class="left-box">
-            <h1 style="text-align: center">Log In</h1>
-            <p style="text-align: center">New to this site?
-            <button class="SignUp"><a href="logIn.html" class="sig" style="color: black">Sign Up</a></button></p><br><br>
-            <input type="text" class="input-box" placeholder="Username">
-            <input type="password" class="input-box" placeholder="Enter password">
-            <input type="log in" class="submit-btn " placeholder="Login">
-           
-        </div>
-    
-        <div class="right-box">
-            <span class="right-title">Log in with<br>Social Network</span>
-            <button class="social facebook">Log in with Facebook</button>
-            <button class="social google">Log in with Google</button>
-        </div>
-    
-        <div class="or">
-            OR
-        </div>
-    
-    
-    
+   
+<div class="SignUp-box">
+    <div class="left-box">
+        <h1 style="text-align: center">Sign Up</h1>
+        <p style="text-align: center">Already a member?
+        <button class="logIn"><a href="log.html" class="log" style="color: black;" >Log In</a></button></p>
+        <input type="text" class="input-box" placeholder="UserName">
+        <input type="email" class="input-box" placeholder="Email">
+        <input type="password" class="input-box" placeholder="Enter password">
+        <input type="password" class="input-box" placeholder="Re-enter password">
+        <input type="submit" class="submit-btn" placeholder="Sign in">
+       
     </div>
+
+    <div class="right-box">
+        <span class="right-title">Sign up with<br>Social Network</span><br><br>
+        <button class="social facebook">Sign Up with Facebook</button>
+        <button class="social google">Sign Up with Google</button>
+    </div>
+
+    <div class="or">
+        OR
+    </div>
+
+
+
+</div>
 </body>
 </html>
