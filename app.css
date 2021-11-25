@@ -64,15 +64,50 @@ nav{
     margin: 68px;
     text-align: end;
 }
-<<<<<<< Updated upstream
-=======
-.tabela_1 {
-    padding: 85px;
-    margin: 43px;
-    margin-left: -115px;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.cards div {
+    position: relative;
+    width: 300px;
+    height: 500px;
     border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    padding: 7px;
 }
-th.tabela_1 {
-    box-sizing: border-box;
+.cards div:hover {
+    box-shadow: gray;
 }
->>>>>>> Stashed changes
+.cards div img{
+    width: 240px;
+    height: 200px;
+}
+.cards div h3{
+    color: rgb(44, 42, 42);
+    font-size: 20px;
+    font-variant: small-caps;    
+}
+.cards div h3 a{
+    text-decoration: none;
+    color: black;
+}
+.cards div p{
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+}
+.cards div button{
+    position: relative;
+    top: 10px;
+    width: 120px;
+    padding: 10px;
+    margin: 40px;
+    background-color: gray;
+    border: 1px solid;
+    cursor: pointer;
+}
