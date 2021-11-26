@@ -127,6 +127,45 @@
         .sig{
             color: blue;
         }
+        .dropbtn {
+   
+   color: #727272;
+  font-weight: 600;
+   font-size: 16px;
+   border: none;
+  
+ }
+.dropbtn:hover{
+   cursor:pointer;
+}
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+   margin-left:0px;
+   
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+
+   min-width: 100px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 10px 12px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown:hover .dropdown-content {display: block;}
+ .dropdown-content a:hover{
+     color:black;
+ }
     </style>
 </head>
 <body>
@@ -139,7 +178,15 @@
             <li><a  href="buy.html">Buy</a></li>
             <li><a  href="sell.html">Sell</a></li>
             <li><a href="about_us.html">About Us</a></li>
-            <li><a href="more.html">More</a></li>
+             <li>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </li>
             <li><a class='active' href="#">Log In</a></li>
         </ul>
     </nav>

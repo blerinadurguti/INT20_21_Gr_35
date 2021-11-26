@@ -28,6 +28,45 @@
     
         margin: -80px;
        }
+       .dropbtn {
+   
+   color: #727272;
+  font-weight: 600;
+   font-size: 16px;
+   border: none;
+  
+ }
+.dropbtn:hover{
+   cursor:pointer;
+}
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+   margin-left:0px;
+   
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+
+   min-width: 100px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 10px 12px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown:hover .dropdown-content {display: block;}
+ .dropdown-content a:hover{
+     color:black;
+ }
        
     </style>
 </head>
@@ -41,7 +80,15 @@
         <li><a  href="buy.html">Buy</a></li>
         <li><a href="sell.html">Sell</a></li>
         <li><a class='active' href="#">About Us</a></li>
-        <li><a href="more.html">More</a></li>
+         <li>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </li>
         <li><a href="log.html">Log In</a></li>
     </ul>
 </nav>
@@ -52,7 +99,7 @@
                 We understand that buying or selling a home isn’t just a business transaction, it’s a whole new beginning. <br>That’s why we offer an extensive array of services, as well as the human touch, making the process as easy and hassle-free as possible. Contact us to get started today.</b></p>
     <br><br><br><br>
         <h1><b>Get to Know Our Team</b></h1><br><br>
-        <p><u>Your Trusted Experts</u></p><br><br><br><br>
+        <p><u>Your Trusted Experts</u></p><br><br><br><br><br>
             <table class="Agents">
                 <tr>
                    <td><img src="agent1.png" alt="Agent 1"></td>
