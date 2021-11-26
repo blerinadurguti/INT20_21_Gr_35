@@ -58,6 +58,7 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: 0.2s;
+            text-align: center;
         }
         .submit-btn:hover,
         .submit-btn:focus{
@@ -119,23 +120,25 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
         }
-        .SignUp{
-            border: none;
+        .SignUp {
+
             background-color: lightgray;
             cursor: pointer;
+            color: black;
+            text-decoration: none;
+           
         }
-        .sig{
-            color: blue;
-        }
+       
         .dropbtn {
-   
-   color: #727272;
+            background-color: rgb(190, 184, 184);
+        color: black;
   font-weight: 600;
    font-size: 16px;
    border: none;
   
  }
 .dropbtn:hover{
+    background-color: white;
    cursor:pointer;
 }
  
@@ -156,6 +159,7 @@
  }
  
  .dropdown-content a {
+    background-color: darkgray;
    color: black;
    padding: 10px 12px;
    text-decoration: none;
@@ -183,7 +187,7 @@
                 <button class="dropbtn">More</button>
                 <div class="dropdown-content">
                     <a href="contact.html">Contact</a>
-                    <a href="#">FAQ</a>
+                    <a href="faq.html">FAQ</a>
                 </div>
             </div>
         </li>
@@ -194,10 +198,10 @@
         <div class="left-box">
             <h1 style="text-align: center">Log In</h1>
             <p style="text-align: center">New to this site?
-            <button class="SignUp"><a href="logIn.html" ><b>Sign Up</b></a></button></p><br><br>
+            <a  class="SignUp" href="logIn.html" ><b>Sign Up</b></a></p><br><br>
             <input type="text" class="input-box" placeholder="Username">
             <input type="password" class="input-box" placeholder="Enter password">
-            <input type="log in" class="submit-btn " placeholder="Login">
+            <input type="submit" class="submit-btn " value="Login">
            
         </div>
     
