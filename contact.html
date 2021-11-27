@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href='app.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
         input[type=text],input[type="email"], select, textarea {
@@ -53,7 +54,47 @@ form{
 }
 .container{
     background-color: whitesmoke;
+} .dropbtn {
+        background-color: gray;
+        color: black;
+   font-weight: 600;
+    font-size: 16px;
+    border: none;
+   
+  }
+.dropbtn:hover{
+    background-color: white;
+    cursor:pointer;
 }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left:0px;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+ 
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+      background-color: darkgray;
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content a:hover{
+      color:black;
+  }
 
       </style>
 </head>
@@ -67,7 +108,15 @@ form{
             <li><a  href="buy.html">Buy</a></li>
             <li><a href="sell.html">Sell</a></li>
             <li><a href="about_us.html">About Us</a></li>
-            <li><a href="more.html">More</a></li>
+            <li>
+              <div class="dropdown">
+                  <button class="dropbtn">More</button>
+                  <div class="dropdown-content">
+                      <a href="contact.html">Contact</a>
+                      <a href="faq.html">FAQ</a>
+                  </div>
+              </div>
+          </li>
             <li><a href="log.html">Log In</a></li>
         </ul>
         </nav>
@@ -104,6 +153,33 @@ form{
             </form>
           </div>
         </div>
-    
+        <footer>
+          <div class="footer-content">
+          <h3>Write Us</h3>
+          <p>
+            ourestate@gmail.com
+          </p>
+          <ul class="socials">
+            <li>
+              <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="https://youtube.com/"><i class="fa fa-youtube"></i></a>
+            </li>
+          </ul>
+          </div>
+          <div class="footer-bottom">
+            <p style="text-align: center;">
+              copyright &copy;2021. designed by <i>Arbresha | Blerina</i>
+            </p>
+          </div>
+        </footer>
+      
 </body>
 </html>
