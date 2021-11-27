@@ -186,7 +186,7 @@ nav{
     bottom: 0;
     background: grey;
     height: auto;
-    width: 100vw;
+    width: 100%;
     padding-top: 0px;
     color: #fff;
     }
@@ -198,10 +198,10 @@ nav{
     text-align: center;
   }
 .footer-content h3{
-    font-size: 1.8rem;
+    font-size: 28px;
     font-weight: 400;
     text-transform: capitalize;  
-    line-height: 3rem;
+    line-height: 48px;
 }
 .footer-content p{
   max-width: 500px;
@@ -214,7 +214,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 3rem 0;
+  margin: 16px 0px 48px 0px;
 }
 .socials li{
   margin: 0 10px;
@@ -224,7 +224,7 @@ nav{
   color: #fff;
 }
 .socials a i{
-  font-size: 1.1rem;
+  font-size: 18px;
   transition: color .4s ease;
 }
 .socials a:hover i{
@@ -232,7 +232,7 @@ nav{
 }
 .fotter-bottom{
   background: #000;
-  width: 100vw;
+  width: 414px;
   padding: 20px 0;
   text-align: center;
 }
