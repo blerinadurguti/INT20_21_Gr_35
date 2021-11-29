@@ -7,9 +7,6 @@
 }
 
 nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     height: 70px;
@@ -95,7 +92,6 @@ display: block;
     display: flex;
     padding: 50px;
     background-color: black;
-    margin-top: 70px;
 }
 .introduction div{
     display: inline-block;
