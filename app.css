@@ -46,10 +46,14 @@ nav{
     font-size: 24px;
 }
 .dropbtn {
-    background-color: rgb(190, 184, 184);
-    border: none;
-    letter-spacing: 2px;
-
+    color: black;
+     text-decoration: none;
+     letter-spacing: 2px;
+     font-weight: bold;
+     font-size: 14px;
+     padding: 2px 8px;
+     border: none;
+     background-color: rgb(190, 184, 184);
 }
 .dropbtn:hover{
 background-color: white;
