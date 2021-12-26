@@ -200,6 +200,7 @@ img{
 }
 .imazhi:hover{
     opacity: 1;
+    border-radius: 10px;
 }
 .image__title{
     font-size: 2cm;
