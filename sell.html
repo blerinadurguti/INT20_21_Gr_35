@@ -30,6 +30,9 @@
             margin-top: 67px;
             cursor: pointer;
         }
+        #demo{
+          color: white;
+        }
         .sell2{
           display: flex;
           justify-content: center;
@@ -37,15 +40,20 @@
           margin-top: 100px;
           background: black;
         }
+        .sell2 {
+          padding: 86px;
+        }
         .sell2 div{
           position: relative;
-          width: 300px;
           height: 500px;
           border: 1px solid black;
           margin: 10px;
           text-align: center;
           padding: 7px;
           color: white;
+        }
+        .div1{
+          display: contents;
         }
         .video{
           padding-bottom: 20px;
@@ -58,11 +66,11 @@
         p{
           word-wrap: break-word;
         }
-        .t2{
-          background: black;
-        }
         .text1{
-          color: white;
+          color: black;
+          background-color: white;
+          margin-top: 57px;
+          padding-top: 108px
         }
         img{
           width: 50%;
@@ -101,44 +109,44 @@
         <button class="btn2">Learn More</button>
     </div>
 </div>
-<div class="t2">
-  <div class="sell1">
-    <div>
-        <img src="faqs.png"width="90%" height="100%" style="float: left; margin-left: 30px;">
-    </div>
-    <div class="text1">
-        <h2>Better Agents. Lower fees</h2>
-        <p>Our Agents are local experts who know how to get you the best offer—<br>and you’ll pay a low 1% listing fee when you sell and buy with us.</p>
-    </div>
+
+  <div class="sell1" >
+        <img src="faqs.png"width="90%" height="100%" style="float: left; margin-left: 37px; margin-top: 3px; padding: 27px; ">
+        <div class="text1">
+         <h2>Better Agents. Lower fees</h2>
+         <p>Our Agents are local experts who know how to get you the best offer—<br>and you’ll pay a low 1% listing fee when you sell and buy with us.</p>
+        </div>
   </div>
-</div>
-<h1 id="demo" onclick="myFunction()" style="text-align: center; margin-top: 70px; margin-bottom: -60px;">Why sell with us?</h1>
+
+<div class="sell2">
+  <h1 id="demo" onclick="myFunction()" style="position: absolute; margin: -27px">Why sell with us?</h1>
 <script>
 function myFunction() {
   document.getElementById("demo").innerHTML = "No matter your budget, we have the perfect home for you!";
 }
 </script>
-<div class="sell2">
+  <div class="div1">
   <div>
-    <a href="#" style="text-decoration: none"><img src="agent1.png" style="width: 270px; height: 270px;"></a><br><br>
+    <a href="#" style="text-decoration: none"><img src="agent1.png" style="width: 270px; height: 270px;"></a><br><br><br>
     <h3>Personal service from a local expert</h3>
     <p>_______________________</p><br>
     <p>Our Agents have the experience to get you top dollar and make sure your sale goes smoothly from pricing to closing </p>
 </div>
 <div>
-    <a href="#"><img src="three_up_2.png" style="width: 270px; height: 270px;"></a><br><br>
+    <a href="#"><img src="sell2_1.png" style="width: 275px; height: 265px;"></a><br><br><br>
     <h3>Your listing will get 4x as many views</h3>
     <p>_______________________</p><br>
     <p>Your home will be showcased on ourestate.com, with best-in-class marketing in email campaigns and across social media.</p>
 </div>
 <div>
-    <a href="#"><img src="three_up_3.png" style="width: 270px; height: 270px;"></a><br><br>
+    <a href="#"><img src="sell2_2.png" style="width: 280px; height: 270px;"></a><br><br><br>
     <h3>Pay a 1% listing fee when you sell&buy</h3>
     <p>_______________________</p><br>
     <p>Redfin clients sell for more money on average, and when you sell and buy with us, you pay a 1% listing fee.</p>
 </div>
 </div>
-<div class="video">
+</div>
+<div class="video" >
 <video controls style="height: 50%; width: 100%; padding: 10px 20px 10px 20px ;">
   <source src="Real Estate Short Video Tour.mp4" type="video/mp4" >
 </video>
