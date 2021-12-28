@@ -30,12 +30,39 @@ button{
     padding: 10px;
     margin: 25px;
 }
-    </style>
+#div1 {
+  width: 357px;
+  height: 263px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: lightgray;
+  margin: auto;
+  margin-top: 44px;
+}
+#btn1:hover{
+    background-color: wheat;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
 </head>
 <body>
     <div style="background-color: black; width: 100%; height: 274px; padding-top: 1px;">
     <h1 style="margin-left: 300px; margin-top: 100px; color: white; position: absolute;"><b><i>Hey people we are expanding!!!</i></b></h1>
-    <img src="fireworks.gif" alt="gif" style="width: 100%; height: 250px; margin-top: 20px;"><br><br><br>
+    <img src="fireworks.gif" alt="gif" style="width: 100%; height: 270px; margin-top: 0px;"><br><br><br>
     </div><br><br>
     <h3>We are very honored to represent you our upcoming Locations.</h3><br>
     <p>You can preorder our beautiful, well located and safe houses.</p>
@@ -86,7 +113,20 @@ button{
         <button>Preorder</button>
     </div>
 </div>
+</div><br><br><br><br>
+<div class="div2" style="background: rgb(155, 154, 154);">
+<h3 style="margin-left: 212px">Don't like any of these houses? Please drag a house design exterior and we will help you very soon!</h3>
 
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><button id="btn1" style="margin-left: 780px;
+margin-top: 3px;">Send</button>
+<br>
+<h3 style="    position: absolute; margin-top: 105px">Suggestions:</h3>
+<div style="padding-left: 165px">
+<img id="drag1" src="house1.jpg" draggable="true" ondragstart="drag(event)" width="336" height="240">
+<img id="drag2" src="house2.jpg" draggable="true" ondragstart="drag(event)" width="336" height="240">
+<img id="drag3" src="house3.jpg" draggable="true" ondragstart="drag(event)" width="336" height="240">
+
+</div>
 </div>
 
 </body>
