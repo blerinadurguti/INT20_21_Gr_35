@@ -56,6 +56,7 @@ form{
     background-color: whitesmoke;
     border-radius: 20px;
 } 
+
       </style>
 </head>
 <body>
@@ -82,7 +83,13 @@ form{
         </nav>
         <div class="container1">
             <div class="text">
-                <h1>Get in Touch</h1><br><br><address> Terry Francois Street San Francisco, CA 94158<br><br>123-456-7890</address>
+              <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+              <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.fillText("Get in Touch", 10, 50);
+                </script><br><br><address> Terry Francois Street San Francisco, CA 94158<br><br>123-456-7890</address>
     
             </div>
         <div class="container">
@@ -100,9 +107,9 @@ form{
     
               <label for="country">Country</label>
               <select id="country" name="country">
-                <option value="australia">Kosovo</option>
-                <option value="canada">Albania</option>
-                <option value="usa">USA</option>
+                <option value="australia">Kosov&euml;</option>
+                <option value="canada">Shqip&euml;ri</option>
+                <option value="usa">UShBA</option>
               </select>
           
               <label for="subject">Subject</label>
