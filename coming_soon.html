@@ -44,18 +44,18 @@ button{
 }
 </style>
 <script>
-function allowDrop(ev) {
+function allowDrop(ev) { // mos me dal ne vendet tjera
   ev.preventDefault();
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData("text", ev.target.id); // me i transferu te dhenat
 }
 
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  ev.target.appendChild(document.getElementById(data)); // nuk na lejon me bo drop
 }
 </script>
 </head>

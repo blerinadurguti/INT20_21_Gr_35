@@ -118,13 +118,14 @@ img{
     position: relative;
     width: 300px;
     height: 500px;
-    border: 1px solid black;
+    border: none;
     margin: 10px;
     text-align: center;
     padding: 7px;
 }
 .cards div:hover {
     box-shadow: gray;
+    transform: scale(1.1);
 }
 .cards div img{
     width: 240px;

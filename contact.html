@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <style>
-
-        input[type=text],input[type="email"], select, textarea {
+  input[type=text],input[type="email"], select, textarea {
   width: 100%; 
   padding: 12px;
   border: none; 
@@ -56,7 +55,6 @@ form{
     background-color: whitesmoke;
     border-radius: 20px;
 } 
-
       </style>
 </head>
 <body>
@@ -93,28 +91,27 @@ form{
     
             </div>
         <div class="container">
-            <form action="action_page.php">
+            <form action="action_page.php" method="post">
           
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
     
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
           
     
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Your email...">
+              <label for="email">Email</label> 
+              <input type="email" id="email" name="email" placeholder="Your email..." required> 
     
               <label for="country">Country</label>
               <select id="country" name="country">
                 <option value="australia">Kosov&euml;</option>
                 <option value="canada">Shqip&euml;ri</option>
-                <option value="usa">UShBA</option>
+                <option value="usa">ShBA</option>
               </select>
           
               <label for="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
               <input type="submit" value="Submit">
           
             </form>
