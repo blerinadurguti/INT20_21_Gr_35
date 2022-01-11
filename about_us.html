@@ -8,7 +8,7 @@
     <link rel="stylesheet" href='app.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <style>
-        .About-Us   {
+      .About-Us   {
             background-color: black;
             padding: 100px;
             text-align: center;
@@ -24,18 +24,106 @@
             border-radius: 20px;
 
         }
-       .Agents{
-    
-        margin: -80px;
-       }
        .socials {
         margin-left: 1190px;
         margin-bottom: -17px;
        }
- 
- img{
-   border-radius: 10px;
- }
+        
+       .card{
+         justify-content: center;
+         width: 300px;
+         height: 400px;
+         background: #fff;
+         transform-style: preserve-3d;
+         transform: perspective(1000px);
+         box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+         transition: 1s;
+         margin: 160px;
+       }
+       .card:hover{
+          transform: translateX(50%); 
+       }
+       .card:hover .imgBox{
+           transform: rotateY(-180deg);
+       }
+       .card .imgBox{
+           position: relative;
+           width: 100%;
+           height: 100%;
+           z-index: 1;
+           transform-origin: left;
+           transform-style: preserve-3d;
+           background: #000;
+           transition: 1s;
+           box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+       }
+       .card .imgBox img{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit:cover ;
+           transform-style: preserve-3d;
+           backface-visibility: hidden;
+           border-radius: 0;
+       }
+       .card .details{
+         position: absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height: 100%;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .card .details .content{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+       }
+       .card .details .content h2{
+         text-align: center;
+         font-weight: 700;
+         line-height: 1em;
+       }
+       .card .details .content h2 span{
+         color: #e21212;
+         font-size: 0.8em;
+       }
+       .card .details .content .social-icons{
+         position: relative;
+         display: flex;
+         margin-top: 10px; 
+       }
+       .card .details .content .social-icons a{
+         display: inline-block;
+         width: 35px;
+         height: 35px;
+         background: #333;
+         color: #fff;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
+         margin: 5px;
+         font-size: 18px;
+         transition: 0.2s;
+       }
+       .card .details .content .social-icons a:hover{
+         background: #e21212;
+       }
+       .card .imgBox img:nth-child(2){
+           transform: rotateY(180deg);
+       }
+       .aboutus1{
+        display: flex;
+       }
+       .aboutus2{
+         display: flex;
+       }
     </style>
 </head>
 <body>
@@ -61,29 +149,88 @@
     </ul>
 </nav>
 <div class="About-Us">
-    <div class="text">
-            <h1><b>All About Us</b></h1><br><br>
-            <p><b>The qualified and experienced agents at Real Estate Agency know that real estate isn’t just about prices; it’s also about relationships. <br>Established in 2000, we match our clients in San Francisco with properties that fit their lifestyle and budget.<br><br>
-                We understand that buying or selling a home isn’t just a business transaction, it’s a whole new beginning. <br>That’s why we offer an extensive array of services, as well as the human touch, making the process as easy and hassle-free as possible. Contact us to get started today.</b></p>
-    <br><br><br><br>
-        <h1><b>Get to Know Our Team</b></h1><br><br>
-        <p><u><i>Your Trusted Experts:</i>
-        </u></p>   <br><br><br><br><br>
-            <table class="Agents">
-                <tr>
-                   <td><img src="agent1.png" alt="Agent 1"></td>
-                   <td style="padding: 37px; text-align: center"><h4>Ash Marcus</h4><br><p>Senior Agent</p></td>
-                   <td><img src="agent2.png" alt="Agent 2"></td>
-                   <td style="padding: 37px; text-align: center"><h4>Charlie McMann</h4><br><p>Junior Agent</p></td>
-                </tr>
-                <tr>
-                    <td><img src="agent3.png " alt="Agent 3"></td>
-                    <td style="padding: 37px; text-align: center"><h4>Jordan Parker</h4><br><p>Associate</p></td>
-                    <td><img src="agent1.png" alt="Agent 4"></td>
-                    <td style="padding: 37px; text-align: center"><h4>Taylor Quill</h4><br><p>Senior Agent</p></td>
-                </tr>
-            </table>
+  <div class="text">
+          <h1><b>All About Us</b></h1><br><br>
+          <p><b>The qualified and experienced agents at Real Estate Agency know that real estate isn’t just about prices; it’s also about relationships. <br>Established in 2000, we match our clients in San Francisco with properties that fit their lifestyle and budget.<br><br>
+              We understand that buying or selling a home isn’t just a business transaction, it’s a whole new beginning. <br>That’s why we offer an extensive array of services, as well as the human touch, making the process as easy and hassle-free as possible. Contact us to get started today.</b></p>
+  </div>
+</div>
+  <div class="aboutus">
+    <br><br>
+    <h1 style="text-align: center;"><b>Get to Know Our Team</b></h1><br><br>
+  <p style="text-align: center;"><u><i>Your Trusted Experts:</i></u></p>
+  <div class="aboutus1">
+<div class="card">
+  <div class="imgBox">
+      <img src="agent1.png">
+      <img src="agent1s.png">
+  </div>
+  <div class="details">
+    <div class="content">
+      <h2>Ash Marcus<br><span>Senior Agent</span></h2>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
     </div>
+  </div>
+</div>
+<div class="card">
+  <div class="imgBox">
+      <img src="agent2.png">
+      <img src="agent2.png">
+  </div>
+  <div class="details">
+    <div class="content">
+      <h2>Charlie McMann<br><span>Junior Agent</span></h2>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="aboutus2">
+  <div class="card">
+    <div class="imgBox">
+        <img src="agent3.png">
+        <img src="agent2.png">
+    </div>
+    <div class="details">
+      <div class="content">
+        <h2>Jordan Parker<br><span>Associate</span></h2>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBox">
+        <img src="agent4.png">
+        <img src="agent2.png">
+    </div>
+    <div class="details">
+      <div class="content">
+        <h2>Taylor Quill<br><span>Senior Agent</span></h2>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 <footer>
   <div class="main-content">
