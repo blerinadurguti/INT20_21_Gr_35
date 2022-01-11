@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://kit.fontawesome.com/00a3e34358.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        .realestate {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(coming1.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            padding: 50px;
+        }
+        .form-box {
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background: white;
+            padding: 5px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .button-box {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px darkgray;
+            border-radius: 30px;
+        }
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right,gray, rgb(78, 76, 76));
+            border-radius: 30px;
+            transition: .5s;
+        }
+        .social-icons {
+            display: list-item;
+            background: none;
+            position: relative;
+            list-style: none;
+            margin-left: 150px;
+            height: 71px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+        .input-group {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s ;
+            font-size: 13px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid darkgray;
+            outline: none;
+            background: transparent;
+        }
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right,gray, rgb(78, 76, 76));
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        .submit-btn:hover{
+         color: lightgray;
+         font-size: inherit;
+        }
+        .check-box{
+            margin: 30px 10px 30px 0;
+        }
+        span {
+            color: black;
+            bottom: 68px;           
+        }
+        #login {
+            left: 50px;
+        }
+        #signup {
+            left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="heading">
+            <a href="index1.html" style="text-decoration: none; color: black;"><h4>Real Estate Agency</h4></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="index1.html" href="index1.html">Home</a></li>
+            <li><a href="buy.html">Buy</a></li>
+            <li><a href="sell.html">Sell</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">More</button>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href='active'>Log In</a></li>
+        </ul>
+        </nav>
+    <div class="realestate">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div> 
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id="signup" class="input-group">
+                <input type="text" class="input-field" placeholder="Name and Surname" required>
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span><u>I agree to the terms & conditions</u></span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+            </div>  
+    </div>
+    <script>
+        var x =document.getElementById("login");
+        var y =document.getElementById("signup");
+        var z =document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0";
+        }
+    </script>
+
+<footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          <p>The qualified and experienced agents at Real Estate Agency know that real estate isn’t just about prices; it’s also about relationships.
+            Established in 2000, we match our clients in San Francisco with properties that fit their lifestyle and budget. <a href="about_us.html" style="color: black;" >Read More</a></p>
+          <div class="social">
+            <a href="https://facebook.com"><span class="fab fa-facebook-f" style="color: white;"></span></a>
+            <a href="#"><span class="fab fa-twitter" style="color: white;"></span></a>
+            <a href="https://instagram.com"><span class="fab fa-instagram" style="color: white;"></span></a>
+            <a href="https://youtube.com"><span class="fab fa-youtube" style="color: white;"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt" style="color: white;"></span>
+            <span class="text3">San Francisko, USA</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt" style="color: white;"></span>
+            <span class="text3">+123456789</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope" style="color: white;"></span>
+            <span class="text3"><a href="mailto:ourestate@gmail.com" style="text-decoration: none; color: white;">ourestate@gmail.com</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom" style="background-color: darkgray; position: absolute; margin-top: 258px; width: 100%;">
+        <center>
+          <span class="credit">Created By <i style="color: white;">Arbresha & Blerina</i> | </span>
+          <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+        </center>
+      </div>
+  </footer>
+</body>
+</html>
