@@ -7,14 +7,14 @@
     <title>Real Estate Agency | HOME</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("h4").dblclick(function(){
     $(this).hide();
   });
 });
-</script>>
+</script>
     <style>
         .button_icon{
             color: white;
@@ -167,7 +167,24 @@ cursor: pointer;
             <div class="content">
               <div class="place">
                 <span class="fas fa-map-marker-alt" style="color: white;"></span>
-                <span class="text3">San Francisko, USA</span>
+                <span class="text3"><p id="demo" style="margin-left: 63px; margin-top: -32px; margin-bottom: 28px;"></p>
+
+                    <script>
+                    // Constructor function for Person objects
+                    function City(Name, Country, State , ZIPCodes) {
+                      this.Name = Name;
+                      this.Country = Country;
+                      this.State = State;
+                      this.ZIP = ZIPCodes;
+                    }
+                    
+                    // Create a Person object
+                    const myCity = new City("San Francisco", "US", "California", "List");
+                    
+                    // Display age
+                    document.getElementById("demo").innerHTML =
+                    " " + myCity.Name; 
+                    </script></span>
               </div>
               <div class="phone">
                 <span class="fas fa-phone-alt" style="color: white;"></span>

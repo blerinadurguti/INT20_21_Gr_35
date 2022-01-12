@@ -76,7 +76,7 @@ form{
                   </div>
               </div>
           </li>
-            <li><a href="log.html">Log In</a></li>
+            <li><a href="Log_in.html">Log In</a></li>
         </ul>
         </nav> 
         <div class="container1">
@@ -137,7 +137,24 @@ form{
               <div class="content">
                 <div class="place">
                   <span class="fas fa-map-marker-alt" style="color: white;"></span>
-                  <span class="text3">San Francisko, USA</span>
+                  <span class="text3"><p id="demo" style="margin-left: 63px; margin-top: -32px; margin-bottom: 28px;"></p>
+
+                    <script>
+                    // Constructor function for Person objects
+                    function City(Name, Country, State , ZIPCodes) {
+                      this.Name = Name;
+                      this.Country = Country;
+                      this.State = State;
+                      this.ZIP = ZIPCodes;
+                    }
+                    
+                    // Create a Person object
+                    const myCity = new City("San Francisco", "US", "California", "List");
+                    
+                    // Display age
+                    document.getElementById("demo").innerHTML =
+                    " " + myCity.Name; 
+                    </script></span>
                 </div>
                 <div class="phone">
                   <span class="fas fa-phone-alt" style="color: white;"></span>
