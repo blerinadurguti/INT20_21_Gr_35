@@ -7,6 +7,17 @@
     <title>About Us</title>
     <link rel="stylesheet" href='app.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+    });
+    $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+    </script>
     <style>
       .About-Us   {
             background-color: black;
@@ -38,15 +49,44 @@
          transform: perspective(1000px);
          box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
          transition: 1s;
-         margin: 160px;
+         margin: 170px;
+         margin-top: 2px;
+       }
+       .card1{
+         justify-content: center;
+         width: 300px;
+         height: 400px;
+         background: #fff;
+         transform-style: preserve-3d;
+         transform: perspective(1000px);
+         box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+         transition: 1s;
+         margin: 170px;
        }
        .card:hover{
+          transform: translateX(50%); 
+       }
+       .card1:hover{
           transform: translateX(50%); 
        }
        .card:hover .imgBox{
            transform: rotateY(-180deg);
        }
+       .card1:hover .imgBox{
+           transform: rotateY(-180deg);
+       }
        .card .imgBox{
+           position: relative;
+           width: 100%;
+           height: 100%;
+           z-index: 1;
+           transform-origin: left;
+           transform-style: preserve-3d;
+           background: #000;
+           transition: 1s;
+           box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+       }
+       .card1 .imgBox{
            position: relative;
            width: 100%;
            height: 100%;
@@ -68,7 +108,29 @@
            backface-visibility: hidden;
            border-radius: 0;
        }
+       .card1 .imgBox img{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit:cover ;
+           transform-style: preserve-3d;
+           backface-visibility: hidden;
+           border-radius: 0;
+       }
        .card .details{
+         position: absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height: 100%;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .card1 .details{
          position: absolute;
          top:0;
          left:0;
@@ -85,7 +147,18 @@
          align-items: center;
          flex-direction: column;
        }
+       .card1 .details .content{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+       }
        .card .details .content h2{
+         text-align: center;
+         font-weight: 700;
+         line-height: 1em;
+       }
+       .card1 .details .content h2{
          text-align: center;
          font-weight: 700;
          line-height: 1em;
@@ -94,7 +167,16 @@
          color: #e21212;
          font-size: 0.8em;
        }
+       .card1 .details .content h2 span{
+         color: #e21212;
+         font-size: 0.8em;
+       }
        .card .details .content .social-icons{
+         position: relative;
+         display: flex;
+         margin-top: 10px; 
+       }
+       .card1 .details .content .social-icons{
          position: relative;
          display: flex;
          margin-top: 10px; 
@@ -112,10 +194,29 @@
          font-size: 18px;
          transition: 0.2s;
        }
+       .card1 .details .content .social-icons a{
+         display: inline-block;
+         width: 35px;
+         height: 35px;
+         background: #333;
+         color: #fff;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
+         margin: 5px;
+         font-size: 18px;
+         transition: 0.2s;
+       }
        .card .details .content .social-icons a:hover{
          background: #e21212;
        }
+       .card1 .details .content .social-icons a:hover{
+         background: #e21212;
+       }
        .card .imgBox img:nth-child(2){
+           transform: rotateY(180deg);
+       }
+       .card1 .imgBox img:nth-child(2){
            transform: rotateY(180deg);
        }
        .aboutus1{
@@ -123,7 +224,22 @@
        }
        .aboutus2{
          display: flex;
+         margin-top: -20px;
        }
+       #panel, #flip {
+       padding: 5px;
+       font-size: 18px;
+       text-align: center;
+       background-color: #555;
+       color: white;
+       border: solid 1px #666;
+       border-radius: 3px;
+      }
+
+       #panel {
+       padding: 50px;
+       display: none;
+      }
     </style>
 </head>
 <body>
@@ -156,28 +272,24 @@
   </div>
 </div>
   <div class="aboutus">
-    <br><br>
-    <h1 style="text-align: center;"><b>Get to Know Our Team</b></h1><br><br>
-  <p style="text-align: center;"><u><i>Your Trusted Experts:</i></u></p>
+    <br>
+    <h1 style="text-align: center;"><b>Get to Know Our Team</b></h1><br>
+  <p style="text-align: center;"><u><i>Your Trusted Experts:</i></u></p><br><br>
   <div class="aboutus1">
 <div class="card">
   <div class="imgBox">
       <img src="agent1.png">
-      <img src="agent1s.png">
+      <img src="agent1.png">
   </div>
   <div class="details">
     <div class="content">
       <h2>Ash Marcus<br><span>Senior Agent</span></h2>
-      <div class="social-icons">
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      </div>
+      <br><br>
+      <p>If you want to get rich in real estate, sell things to Realtors</p>
     </div>
   </div>
 </div>
-<div class="card">
+<div class="card1">
   <div class="imgBox">
       <img src="agent2.png">
       <img src="agent2.png">
@@ -185,12 +297,8 @@
   <div class="details">
     <div class="content">
       <h2>Charlie McMann<br><span>Junior Agent</span></h2>
-      <div class="social-icons">
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      </div>
+      <br><br>
+     <p>You don’t have to be too bright to get into real estate.</p>
     </div>
   </div>
 </div>
@@ -199,39 +307,37 @@
   <div class="card">
     <div class="imgBox">
         <img src="agent3.png">
-        <img src="agent2.png">
+        <img src="agent3.png" >
     </div>
     <div class="details">
       <div class="content">
-        <h2>Jordan Parker<br><span>Associate</span></h2>
-        <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
+        <h2>Jordan Parker<br><span>Junior Agent</span></h2>
+        <br><br>
+        <p>I can find you a great apartment, in a great neighborhood, for a low price. Pick two.</p>
       </div>
     </div>
   </div>
-  <div class="card">
+  <div class="card1">
     <div class="imgBox">
         <img src="agent4.png">
-        <img src="agent2.png">
+        <img src="agent4.png">
     </div>
     <div class="details">
       <div class="content">
         <h2>Taylor Quill<br><span>Senior Agent</span></h2>
-        <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
+        <br><br>
+        <p>Perhaps the secret to making a billion dollars in real estate is that there is no secret.</p>
       </div>
     </div>
   </div>
 </div>
 </div>
+<div class="agents">
+  <div id="flip">Our previous agents</div>
+  <div id="panel"> 
+    
+  </div>
+    </div>
 <footer>
   <div class="main-content">
     <div class="left box">
