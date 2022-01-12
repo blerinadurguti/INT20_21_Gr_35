@@ -13,6 +13,43 @@
       }
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("video").hide(function(){
+          alert("The video is now hidden");
+        });
+      });
+      $("#show").click(function(){
+        $("video").show();
+      });
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("h5").click(function(){
+          alert("Text: " + $("h5").text());
+        });
+        $("h5").click(function(){
+          alert("HTML: " + $("h5").html());
+        });
+      });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $("h6").click(function(){
+            $("h6").append(" <b>and you’ll pay a low 1% listing fee when you sell and buy with us.</b>.");
+          });
+        });
+        </script>
+        <script>
+          $(document).ready(function(){
+            $("#text3").click(function(){
+              $("#text4").remove();
+            });
+          });
+          </script>
     <style>
         .sell   {
             background-color: black;
@@ -154,7 +191,7 @@
     
     <div class="text">
         <h1><b>Sell Your Property</b></h1><br><br>
-        <p>Market and sell your property for the best price with our innovative and strategic approach. From preparing your listing to closing the deal, we’ll be by your side the entire time. <mark style="background-color: lightgray;">Contact us</mark> today to get started.</p>
+        <h5 style="font-size: 18px; cursor: pointer;">Market and sell your property for the best price with our innovative and strategic approach. From preparing your listing to closing the deal, we’ll be by your side the entire time. <b><mark style="background-color: lightgray;">Contact us</mark> </b>today to get started.</h5>
        <input type="button" value="Learn more" onclick="fun()" style="
         padding: 15px;
         margin: 10px;
@@ -176,11 +213,11 @@
           <span style="--i:7"><img src="coming3.jpg" alt=""></span>
           <span style="--i:8"><img src="coming4.jpg" alt=""></span>
         </div>
-        <div class="text1" style="height: 300px">
+        <div class="text1">
+        <h3 id="text3" style="cursor: pointer;">Better Agents. Lower fees</h3>
+        <div class="text2" style="height: 300px">
           <section>
-            <h3>Better Agents. Lower fees</h3>
-            <p>Our Agents are local experts who know how to get you the best offer—
-              and you’ll pay a low 1% listing fee when you sell and buy with us.</p>
+            <h6 id="text4" style="font-size: 15px; cursor: pointer;">Our Agents are local experts who know how to get you the best offer—</h6>
           </section>
         </div>
   </div>
@@ -219,10 +256,12 @@ function myFunction() {
 </div>
 </div>
 </div>
-<div class="video" >
-<video controls style="height: 50%; width: 100%; padding: 10px 20px 10px 20px ;">
+<div class="video" style="background: linear-gradient(rgb(138, 132, 132), darkgray); margin: 0;" >
+<video controls style="height: 50%; width: 100%; padding: 0 20px 0 20px ;">
   <source src="Real Estate Short Video Tour.mp4" type="video/mp4" >
 </video>
+<button id="hide" style="padding: 15px; margin: 10px; border-radius: 113px; cursor: pointer">Hide</button>
+<button id="show" style="float: right; padding: 15px; margin: 10px; border-radius: 113px; cursor: pointer">Show</button>
 </div>
 
 <footer>

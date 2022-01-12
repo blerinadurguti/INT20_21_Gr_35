@@ -8,6 +8,17 @@
     <title>FAQ</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $("#test1").text("Local Professional Advice");
+  });
+  $("p").click(function(){
+    $("#test1").html("<b>Local Professional Advice</b>");
+  });
+});
+</script>
     <style>
         img {
             width: 1349px;
@@ -83,7 +94,7 @@
         <div class="img1">
         <div class="blackLayer">
             <h1><abbr title="Frequently Asked Questions">FAQs</abbr></h1><br><br>
-        <p>Local Professional Advice</p>
+        <p id="test1" style="cursor: pointer;">Local Professional Advice</p>
         </div>
     </div>
         <br>
