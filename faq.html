@@ -65,6 +65,47 @@ $(document).ready(function(){
             color: whitesmoke;
             text-align: center;
         }
+        .accordion{
+           
+            display: flex;
+            margin-inline: 35px;
+        }
+        .accordion .contentBx{
+            position: relative;
+            margin: 10px 20px;
+         
+
+        }
+        .accordion .contentBx .label{
+            position: relative;
+            padding: 10px;
+            background: darkgray;
+            color: black;
+            cursor: pointer;
+        }
+        .accordion .contentBx .label::before{
+            content: '+';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+        .accordion .contentBx.active .label::before{
+            content: '-';
+        }
+        .accordion .contentBx .content{
+            position: relative;
+            background: #fff;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            
+        }
+        .accordion .contentBx.active .content{
+            height: 150px;
+
+        }
     </style>
 </head>
 
@@ -100,37 +141,35 @@ $(document).ready(function(){
         <br>
         <br>
         <div class="fq1">
-            <div class="faq_num1" >
-                <h3>
-                    How do your fees work?
-                </h3>
-                <br><br><br>
-                <br>
-                <p style="font-size: 15px">
-                    Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.
-                </p>
+          <img src="images/faq.png" style="width: 30%; height: 30%;">
+          <div class="accordion">
+            <div class="contentBx">
+                <div class="label"><b> What is the selling price <br>of my home?</b></div>
+                <div class="content">
+                    <p>Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.</p>
+                </div>
             </div>
-            <div class="faq_num1" style="padding-left: 121px;">
-                <h3>
-                    Can you guarantee me a<br> successful sale?
-                </h3>
-                <br><br>
-                <br>
-
-                <p style="font-size: 15px">
-                    Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.
-                </p>
+            <div class="contentBx">
+                <div class="label"><b>Can you guarantee me a<br> successful sale?</b></div>
+                <div class="content">
+                    <p> Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.</p>
+                </div>
             </div>
-            <div class="faq_num1" style="margin-left: 90px;">
-                <h3>
-                    How many homes should I look<br> at before I make a purchasing<br> decision?
-                </h3>
-                <br>
-                <br>
-                <p style="font-size: 15px">
-                    Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.
-                </p>
+            <div class="contentBx">
+                <div class="label"><b>Should I order a home inspection?</b></div>
+                <div class="content">
+                    <p>Enter your answer here. Be thoughtful, write<br> clearly and concisely, and consider adding<br> written as well as visual examples. Go over<br> what you’ve written to make sure that if it<br> was the first time you were visiting the site,<br> you’d understand your answer.</p>
+                </div>
             </div>
+        </div>
+        <script>
+            const accordion=document.getElementsByClassName('contentBx');
+            for(i=0; i<accordion.length;i++){
+                accordion[i].addEventListener('click', function(){
+                    this.classList.toggle('active')
+                })
+            }
+        </script>
         </div>
     </div>
     <footer>
