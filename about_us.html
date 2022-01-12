@@ -247,6 +247,54 @@
        padding: 50px;
        display: none;
       }
+      .slider {
+            height: 250px;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+        .slide-track {
+            display: flex;
+            width: (250px * 80);
+            animation: scroll 40s linear infinite;
+        }
+        .slide-track:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 9));
+            }
+        }
+        .slide {
+            height: 200px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            transition: transform 1s;
+        }
+        .slider::before{
+            left: 0;
+            top: 0;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
     </style>
 </head>
 <body>
@@ -340,9 +388,60 @@
 </div>
 </div>
 <div class="agents">
-  <div id="flip">Our previous agents</div>
+  <div id="flip" style="height: 50px;"><h3>Our previous agents</h3></div>
   <div id="panel"> 
-    
+    <div class="slider">
+      <div class="slide-track">
+           <div class="slide">
+               <img src="images/agent5.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent6.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent7.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent8.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent5.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent6.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent7.png" alt="">
+           </div>
+           <div class="slide">
+               <img src="images/agent8.png" alt="">
+           </div>
+           <div class="slide">
+            <img src="images/agent5.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/agent6.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/agent7.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/agent8.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/agent5.png" alt="">
+      </div>
+      <div class="slide">
+          <img src="images/agent6.png" alt="">
+      </div>
+      <div class="slide">
+          <img src="images/agent7.png" alt="">
+      </div>
+      <div class="slide">
+          <img src="images/agent8.png" alt="">
+      </div>
+      </div>
+   </div>
   </div>
     </div>
 <footer>
