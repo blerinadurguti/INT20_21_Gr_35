@@ -93,6 +93,7 @@ text-decoration: none;
     display: flex;
     padding: 50px;
     background-color: black;
+    height: 556px;
 }
 .introduction div{
     display: inline-block;
@@ -107,7 +108,10 @@ img{
     justify-content: center;
     padding: 52px;
     margin: 68px;
-    text-align: end;
+    text-align: center;
+    width: 326px;
+    padding-left: 230px;
+    margin-top: -23px;
 }
 .cards {
     display: flex;
