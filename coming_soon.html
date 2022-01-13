@@ -50,6 +50,29 @@ button{
 #dropbtn:hover{
 background-color: white;
 }
+h2 {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 0px;
+        }
+        .coming-soon {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 75%;
+            margin-left: 167px;
+        }
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .day, .hour, .minute, .second {
+            font-size: 30px;
+            font-weight: bolder;
+        }
 </style>
 <script>
 function allowDrop(ev) { // mos me dal ne vendet tjera
@@ -78,8 +101,8 @@ function drop(ev) {
             <li><a  href="sell.html">Sell</a></li>
             <li><a href="about_us.html">About Us</a></li>
             <li>
-                <div class="dropdown" >
-                    <button class="dropbtn" style="display: contents;">More</button>
+                <div class="dropdown"  style="background-color: rgb(190, 184, 184);">
+                    <button class="dropbtn" style="display: contents">More</button>
                     <div class="dropdown-content">
                         <a href="contact.html">Contact</a>
                         <a href="faq.html">FAQ</a>
@@ -90,8 +113,57 @@ function drop(ev) {
         </ul>
     </nav>
     <section>
-        <video src="Real Estate Short Video Tour.mp4" autoplay="" muted="" loop=""></video>
-    </section><br><br><br>
+        <video src="Real Estate Short Video Tour.mp4" autoplay="" muted="" ></video>
+        <section class="coming-soon">
+            <div>
+            <h2>Coming Soon Beautiful Destinations!</h2>
+            <div class="countdown">
+                <div class="conteriner-day">
+                    <h3 class="day">Time</h3>
+                    <h3>Day</h3>
+                </div>
+                <div class="conteriner-hour">
+                    <h3 class="hour">Time</h3>
+                    <h3>Hour</h3>
+                </div>
+                <div class="conteriner-minute">
+                    <h3 class="minute">Time</h3>
+                    <h3>Minute</h3>
+                </div>
+                <div class="conteriner-second">
+                    <h3 class="second">Time</h3>
+                    <h3>Second</h3>
+                </div>
+            </div>
+            </div>
+        </section> 
+        <script>
+        const countdown = () => {
+            const countDate = new Date('February 17, 2022 00:00:00').getTime();
+            const now= new Date().getTime();
+            const gap= countDate -now;
+
+            //How  times work?
+            const second = 1000;
+            const minute=second*60;
+            const hour=minute*60;
+            const day=hour*24;
+
+            //Calculate
+            const textDay= Math.floor(gap  /day);  //Math.floor -> Nr. i plote
+            const textHour= Math.floor((gap % day) / hour);
+            const textMinute= Math.floor((gap % hour) / minute);
+            const textSecond= Math.floor((gap % minute) / second);
+
+            document.querySelector(".day").innerText=textDay;
+            document.querySelector(".hour").innerText=textHour;
+            document.querySelector(".minute").innerText=textMinute;
+            document.querySelector(".second").innerText=textSecond;
+        };
+        setInterval(countdown,1000);
+
+    </script>
+    </section>
     <h3>We are very honored to represent you our upcoming Locations.</h3>
     <p>You can preorder our beautiful, well located and safe houses.</p><br><br>
     
