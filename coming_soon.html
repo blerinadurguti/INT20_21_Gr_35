@@ -7,17 +7,17 @@
     <title>Coming Soon</title>
     <link rel="stylesheet" href="app.css">
     <style>
-        body {
-            background-color: gray;
-        }
-        section {
-            width: 100%;
-            height: 100%;
-            padding-left: 35px;
-            object-fit: cover;
-            overflow: hidden;
-            pointer-events: none;
-        }
+ body {
+    background-color: gray;
+}
+ section {
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+}
 .img-cs {
     
     justify-content: center;
@@ -68,6 +68,27 @@ function drop(ev) {
 </script>
 </head>
 <body>
+    <nav>
+        <div class="heading">
+            <a href="index1.html" style="text-decoration: none; color: black;"><h4>Real Estate Agency</h4></a>
+        </div>
+        <ul class="nav-links" style="align-items: center;">
+            <li><a  href="index1.html">Home</a></li>
+            <li><a  href="buy.html" class="active">Buy</a></li>
+            <li><a  href="sell.html">Sell</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li>
+                <div class="dropdown" style="background-color: rgb(190, 184, 184);">
+                    <button class="dropbtn" style="display: contents;">More</button>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="Log_in.html">Log In</a></li>
+        </ul>
+    </nav>
     <section>
         <video src="Real Estate Short Video Tour.mp4" autoplay="" muted="" loop=""></video>
     </section><br><br><br>
@@ -142,6 +163,5 @@ margin-top: 3px;">Send</button>
         video.style.opacity=value;
     })
 </script>
-
 </body>
 </html>
