@@ -55,6 +55,55 @@ form{
     background-color: whitesmoke;
     border-radius: 20px;
 } 
+#form{
+        position: relative;
+        margin-top: -90px;
+    }
+    #form #email{
+        border: none;
+        color: black;
+        font-size: 13px;
+        border-bottom: 1px solid black;
+        box-sizing: border-box; 
+        margin-bottom: 16px; 
+        resize: vertical;
+        background-color: whitesmoke;
+        padding: 12px;
+        width: 100%; 
+        margin-top: 6px; 
+    }
+    #form .inputBox{
+        position: relative;
+    }
+    #text{
+        display: block;
+        color: #000;
+        font-weight: 300;
+        font-style: italic;
+        padding: 5px;
+    }
+    #form.invalid .inputBox:before{
+        position:absolute ;
+        right: 12px;
+        content: '';
+        top:12px ;
+        width: 24px;
+        height: 24px;
+        background: url(images/invalid.png);
+        background-size: cover;
+        z-index: 1000;
+    }
+    #form.valid .inputBox:before{
+        position:absolute ;
+        right: 12px;
+        content: '';
+        top:12px ;
+        width: 24px;
+        height: 24px;
+        background: url(images/valid.png);
+        background-size: cover;
+        z-index: 1000;
+    }
       </style>
 </head>
 <body>
@@ -99,22 +148,58 @@ form{
               <label for="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name.." required> 
           
-    
-              <label for="email">Email</label> 
-              <input type="email" id="email" name="email" placeholder="Your email..." required> 
-    
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="australia">Kosov&euml;</option>
-                <option value="canada">Shqip&euml;ri</option>
-                <option value="usa">ShBA</option>
-              </select>
-          
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-              <input type="submit" value="Submit">
-          
+    </form>
+              <form id="form" action="#">
+                <p>Email</p>
+                <div class="inputBox">
+                    <input type="text" name="" id="email" placeholder="Enter Email Address.." onkeydown="validation()">
+                    <span id="text"></span>
+                </div>
             </form>
+            <script type="text/javascript">
+              function validation(){
+                  var form=document.getElementById("form");
+                  var email=document.getElementById("email").value;
+                  var text=document.getElementById("text");
+                  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                  if (email.match(pattern))
+                  {
+                      form.classList.add("valid");
+                      form.classList.remove("invalid");
+                      text.innerHTML="Your Email Address in Valid.";
+                      text.style.color="#00ff00";
+                      text.style.fontSize="13px";
+                      text.style.marginTop='-10px';
+                  }else{
+                      form.classList.remove("valid");
+                      form.classList.add("invalid");
+                      text.innerHTML="Please Enter Valid Email Address";
+                      text.style.color="#ff0000";
+                      text.style.fontSize="13px";
+                      text.style.marginTop='-10px';
+                  }
+                  if(email=="")
+                  {
+                      form.classList.remove("valid");
+                      form.classList.remove("invalid");
+                      text.innerHTML="";
+                      text.style.color="00ff00";
+                  }
+              }
+          </script>
+           <form action="action_page.php" method="post" style="margin-top: -100px;">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Kosov&euml;</option>
+              <option value="canada">Shqip&euml;</option>
+              <option value="usa">USA</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+        
+            <input type="submit" value="Submit">
+           </form>
           </div>
         </div>
         <footer>
