@@ -5,39 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        #particles-js {
+            height: 100vh;
+            background: black;
+        }
+    </style>
 </head>
-<script>
-    function realtimeClock() {
-        var rtClock= new Date();
-        var hours= rtClock.getHours();
-        var minutes= rtClock.getMinutes();
-        var seconds= rtClock.getSeconds();
-        
-        var amPm=  (hours < 12 ) ? "AM" : "PM";
-        hours=(hours > 12) ? hours-12 : hours;
-
-        hours= ("0"+ hours).slice(-2);
-        minutes= ("0"+ minutes).slice(-2);
-        seconds=("0"+seconds).slice(-2);
-
-        document.getElementById('clock').innerHTML=hours+ " : "+minutes+ " : "+  seconds + " "+amPm;
-        vart =setTimeout(realtimeClock,500);
-    }
-</script>
-<style>
-    #clock {
-        position: absolute;
-        color: black;
-        text-align: center;
-        font-weight: bold;
-        position: sticky;
-    }
-</style>
-<body onload="realtimeClock()">
-     <div class="main-container">
-         <div id="clock">
-
-         </div>
-     </div>
+<body>
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
