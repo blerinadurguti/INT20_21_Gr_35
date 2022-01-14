@@ -8,6 +8,13 @@
     <link rel="stylesheet" href='app.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function color(z){
+          var a=getComputedStyle(z);
+          var b=a.backgroundColor;
+          document.getElementsByClassName("aboutus")[0].style.backgroundColor=b;
+      }
+  </script>
     <script> 
     $(document).ready(function(){
     $("#flip").click(function(){
@@ -295,6 +302,25 @@
             top: 0;
             transform: rotateZ(180deg);
         }
+        .color{
+            display: table-cell;
+            width: 50px;
+            height: 8px;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+        .clr1{
+            background-color: gray;
+        }
+        .clr2{
+            background-color: lightslategray;
+        }
+        .clr3{
+            background-color: lightgray;
+        }
+        .clr4{
+            background-color: whitesmoke;
+        }
     </style>
 </head>
 <body>
@@ -385,6 +411,12 @@
       </div>
     </div>
   </div>
+</div>
+<div class="container">
+  <span id="1" onclick="color(this)" class="color clr1"></span>
+  <span id="2" onclick="color(this)" class="color clr2"></span>
+  <span onclick="color(this)" class="color clr3"></span>
+  <span onclick="color(this)" class="color clr4"></span>
 </div>
 </div>
 <div class="agents">

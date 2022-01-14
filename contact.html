@@ -144,9 +144,11 @@ form{
           
               <label for="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name.." required> 
+              <p id="message1"></p>
             
               <label for="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name.." required> 
+              <p id="message2"></p>
 
               <label for="number">Phone Number</label>
               <input type="text" id="number" name="PhoneNumber" placeholder="Your phone number.." required> 
@@ -202,7 +204,7 @@ form{
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
         
-            <button type="button" id="btn" onclick="myFunction()">Submit</button>
+            <button type="button" id="btn" onclick="myFunction(); myFunction1(); myFunction2()">Submit</button>
            </form>
            <script>
             function myFunction() {
@@ -212,6 +214,35 @@ form{
               try { 
                 if(x == "")  throw "is Empty";
                 if(isNaN(x)) throw "not a number";
+              }
+              catch(err) {
+                message.innerHTML = "Input " + err;
+                message.style.color="red";
+                message.style.fontSize="13px";
+                message.style.fontStyle="italic";
+              }
+            }
+            function myFunction1() {
+              const message = document.getElementById("message1");
+              message.innerHTML = "";
+              let x = document.getElementById("fname").value;
+              try { 
+                if(x == "")  throw "is Empty";
+              }
+              catch(err) {
+                message.innerHTML = "Input " + err;
+                message.style.color="red";
+                message.style.fontSize="13px";
+                message.style.fontStyle="italic";
+              }
+            }
+            function myFunction2() {
+              const message = document.getElementById("message2");
+              message.innerHTML = "";
+              let x = document.getElementById("lname").value;
+              try { 
+                if(x == "")  throw "is Empty";
+               
               }
               catch(err) {
                 message.innerHTML = "Input " + err;
