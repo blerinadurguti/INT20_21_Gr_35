@@ -21,7 +21,7 @@
 }
 
 
-#submit {
+#btn {
   background-color: gray;
   color: white;
   padding: 5px 10px;
@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-#submit:hover {
+#btn:hover {
   background-color: lightgray;
 }
 
@@ -147,6 +147,10 @@ form{
             
               <label for="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name.." required> 
+
+              <label for="number">Phone Number</label>
+              <input type="text" id="number" name="PhoneNumber" placeholder="Your phone number.." required> 
+              <p id="message"></p>
           
     </form>
               <form id="form" action="#">
@@ -198,8 +202,25 @@ form{
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
         
-            <button id="submit" type="submit">Submit</button>
+            <button type="button" id="btn" onclick="myFunction()">Submit</button>
            </form>
+           <script>
+            function myFunction() {
+              const message = document.getElementById("message");
+              message.innerHTML = "";
+              let x = document.getElementById("number").value;
+              try { 
+                if(x == "")  throw "is Empty";
+                if(isNaN(x)) throw "not a number";
+              }
+              catch(err) {
+                message.innerHTML = "Input " + err;
+                message.style.color="red";
+                message.style.fontSize="13px";
+                message.style.fontStyle="italic";
+              }
+            }
+            </script>
           </div>
         </div>
         <footer>
