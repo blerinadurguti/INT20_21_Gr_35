@@ -159,6 +159,7 @@
                 <input type="text" class="input-field" placeholder="Name and Surname" required>
                 <input type="text" class="input-field" placeholder="Email" required>
                 <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="password" class="input-field" placeholder="Confirm Password" required>
                 <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
                 <button type="submit" class="submit-btn">Register</button>
             </form>
@@ -204,7 +205,7 @@
             <span class="text3"><p id="demo" style="margin-left: 63px; margin-top: -32px; margin-bottom: 28px;"></p>
 
                 <script>
-                // Constructor function for Person objects
+             
                 function City(Name, Country, State , ZIPCodes) {
                   this.Name = Name;
                   this.Country = Country;
@@ -212,10 +213,10 @@
                   this.ZIP = ZIPCodes;
                 }
                 
-                // Create a Person object
+              
                 const myCity = new City("San Francisco", "US", "California", "List");
                 
-                // Display age
+                
                 document.getElementById("demo").innerHTML =
                 " " + myCity.Name; 
                 </script></span>
