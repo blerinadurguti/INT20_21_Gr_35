@@ -93,7 +93,9 @@ text-decoration: none;
     display: flex;
     padding: 50px;
     background-color: black;
-    height: 556px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 .introduction div{
     display: inline-block;
@@ -106,27 +108,26 @@ img{
 .text{
     color: white;
     justify-content: center;
-    padding: 52px;
-    margin: 68px;
+    padding: 5%;
+    margin: 7%;
     text-align: center;
     width: 326px;
-    padding-left: 230px;
-    margin-top: -23px;
+    padding-left: 23%;
+    margin-top: 5%;
 }
 .cards {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 100px;
+    position: relative;
+    margin-top: 56%;
 }
 .cards div {
-    position: relative;
-    width: 300px;
-    height: 500px;
     border: none;
-    margin: 10px;
+    margin: 1.5%;
     text-align: center;
-    padding: 7px;
+    padding: 2%;
 }
 .cards div:hover {
     box-shadow: gray;
@@ -167,8 +168,8 @@ img{
     display: block;
     position: relative;
     justify-items: auto;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 6%;
+    padding-bottom: 6%;
     }
 .animacion:hover {
     transform: scale(1.1);
@@ -178,7 +179,7 @@ img{
     color: white;
 }
 .events{
-    padding: 70px;
+    margin-left: 6%;
 }
 .image {
     position: relative;
@@ -218,15 +219,15 @@ img{
 }
 #map {
     width: 100%;
-    height: 50%;
+    height: 100%;
     background-color: black;
     padding-bottom: 70px;
 }
 #map h1{
     color: white;
     text-align: center;
-    padding: 50px;
-    padding-top: 30px;
+    padding: 5%;
+    padding-top: 3%;
     padding-bottom: 0px;
 }
 #map iframe{
